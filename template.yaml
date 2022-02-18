@@ -13,6 +13,11 @@ Globals:
     Timeout: 100
     Runtime: nodejs14.x
 
+Parameters:
+  Stage:
+    Type: String
+    Default: sandbox
+
 Resources:
   getAllItemsFunction:
     Type: AWS::Serverless::Function
@@ -86,6 +91,7 @@ Resources:
   SampleTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
+      TableName: !Join [ "-", [ !Ref Stage, sam-reference-app, notes ] ]
       PrimaryKey:
         Name: id
         Type: String
