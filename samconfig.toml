@@ -15,10 +15,10 @@ parameter_overrides = "Stage=\"sandbox\""
 [dev.deploy]
 [dev.deploy.parameters]
 stack_name = "dev-sam-reference-app"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-w065kzffb99e"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-5dyv0ffcs99x"
 s3_prefix = "dev-sam-reference-app"
-region = "eu-central-1"
-profile = "e-sandbox"
+region = "eu-west-1"
+profile = "default"
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
 parameter_overrides = "Stage=\"dev\""
